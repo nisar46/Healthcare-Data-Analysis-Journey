@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Notes: Year 4 - Hospital Analytics</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #fff;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #2980b9;
+            margin-top: 30px;
+        }
+
+        h4 {
+            color: #16a085;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            color: #e74c3c;
+        }
+
+        pre {
+            background-color: #282c34;
+            color: #abb2bf;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', monospace;
+        }
+
+        .highlight {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-left: 5px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        .analogy {
+            background-color: #e8f6f3;
+            padding: 15px;
+            border-left: 5px solid #1abc9c;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #eee;
+            margin: 40px 0;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                margin: 2cm;
+            }
+
+            .no-print {
+                display: none;
+            }
+
+            pre {
+                white-space: pre-wrap;
+                background-color: #f4f4f4;
+                color: #000;
+                border: 1px solid #ccc;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="no-print"
+        style="background:#333; color:#fff; padding:10px; text-align:center; margin-bottom:20px; border-radius:5px;">
+        <strong>Instructions:</strong> Right-click > "Print..." > "Save as PDF".
+    </div>
+
+    <h1>📊 Learning Notes: Year 4 - The Analytics Report</h1>
+
+    <!-- PROJECT CONTEXT SECTION -->
+    <div
+        style="background-color: #f0f7ff; border-left: 5px solid #3498db; padding: 15px; margin: 20px 0; border-radius: 4px;">
+        <h3 style="margin-top: 0; color: #3498db;">🚀 Project Context: Business Intelligence</h3>
+        <p><strong>WHAT did we do?</strong><br>
+            We turned raw data into a Management Summary, showing which clinics were busy and which were earning the
+            most money.</p>
+
+        <p><strong>WHY did we do it?</strong><br>
+            The CEO doesn't have time to read 1,000 rows. They need a 1-page summary to make decisions (e.g., "Hire more
+            nurses for ENT").</p>
+
+        <p><strong>HOW did we do it?</strong><br>
+            We used <strong>"Dictionaries"</strong> (Key-Value pairs). This allowed us to create "buckets" for each
+            clinic and count patients automatically.</p>
+
+        <p><strong>💡 LESSON LEARNT:</strong><br>
+            The value of data comes from <strong>Aggregation</strong> (Summarizing). This was your entry into "Big Data"
+            thinking.</p>
+    </div>
+    <!-- END PROJECT CONTEXT SECTION -->
+    <p><strong>Topic:</strong> Dictionaries (Grouping Data)</p>
+    <p>In Year 4, you became the "Data Guy". Management didn't want patient names; they wanted
+        <strong>summaries</strong>. "How much did Cardiology earn?" "How many patients in Pediatrics?"
+    </p>
+
+    <hr>
+    <h3>1. The "Mailroom" (The Dictionary)</h3>
+    <div class="analogy">
+        Imagine a wall of <strong>Mailboxes (Cubbyholes)</strong> in the staff room.<br>
+        1. Each box has a label (Cardiology, ENT, etc.).<br>
+        2. When a patient comes in, you don't keep the file. You look at their department and put a "tick mark" in the
+        correct box.
+    </div>
+
+    <pre><code>clinic_stats = {}</code></pre>
+    <ul>
+        <li><strong><code>{}</code> (Curly Braces)</strong>: This creates an empty dictionary. It's an empty wall
+            waiting for labels.</li>
+    </ul>
+
+    <hr>
+    <h3>2. Sorting the Mail (The Logic)</h3>
+    <pre><code>if clinic not in clinic_stats:
+    clinic_stats[clinic] = {'count': 0, 'revenue': 0}
+
+clinic_stats[clinic]['count'] += 1
+clinic_stats[clinic]['revenue'] += bill</code></pre>
+
+    <h4>Step-by-Step Translation:</h4>
+    <ol>
+        <li><strong><code>if clinic not in...</code></strong>: "Do we have a mailbox for 'Dental' yet? No? Okay, grab a
+            label maker and stick a 'Dental' sticker on a new box."</li>
+        <li><strong><code>['count'] += 1</code></strong>: "Add 1 to the patient counter in that box."</li>
+        <li><strong><code>['revenue'] += bill</code></strong>: "Add their money to the total cash in that box."</li>
+    </ol>
+
+    <hr>
+    <h3>3. The Report (Ranking)</h3>
+    <pre><code>sorted_clinics = sorted(clinic_stats.items(), reverse=True)</code></pre>
+    <ul>
+        <li>We don't just show the list randomly. We use <strong><code>sorted</code></strong> to put the busiest
+            departments at the top. This helps the CEO see what's important immediately.</li>
+    </ul>
+
+    <div class="highlight">
+        <h3>💡 Key Takeaway</h3>
+        <p><strong>Dictionaries</strong> are the secret to "Big Data". They let you take 1 million rows and crush them
+            down into a simple 1-page summary table.</p>
+    </div>
+</body>
+
+</html>
