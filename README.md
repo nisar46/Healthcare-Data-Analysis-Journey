@@ -13,42 +13,43 @@ While Years 1–5 focused on **Operational Logic** and strategic prototyping, **
 
 ---
 
-## 🚀 The Journey Structure
+### 🚀 The Journey Structure
 
-### [Year 01: The Cleanup (Foundation)](./Year_One)
-*   **Role:** Operations Coordinator
-*   **The Problem:** 1,000s of patient records with typos, missing IDs, and messy data.
-*   **The Solution:** Python Scripts for **Data Cleaning**.
-*   **Key Concept:** `If-Statements` (The "Triage Nurse" Logic).
-*   **Analyzed Script:** [`year_1_cleaning.py`](./Year_One/year_1_cleaning.py)
+**Year 01: The Cleanup (Foundation)**
+*   **Role:** **Data Analyst**
+*   **The Problem:** 1,000s of patient records with typos, missing IDs, and messy clinical data.
+*   **The Solution:** Python Scripts for Data Cleaning & Record Hygiene.
+*   **Key Concept:** If-Statements (The "Triage Analyst" Logic).
+*   **Analyzed Script:** [year_1_cleaning.py](https://github.com/nisar46/Healthcare-Data-Analysis-Journey/blob/main/Year_One/year_1_cleaning.py)
 
-### [Year 02: Revenue Protection (Auditing)](./Year_Two)
-*   **Role:** Billing In-Charge
-*   **The Problem:** Revenue leakage due to manual typing errors (e.g., negative bills).
-*   **The Solution:** Automated **Billing Audits**.
-*   **Key Concept:** `Loops` & `Comparisons` (The "Scanner" Logic).
-*   **Analyzed Script:** [`year_2_billing_audit.py`](./Year_Two/year_2_billing_audit.py)
+**Year 02: Revenue Protection (Auditing)**
+*   **Role:** **Data Analyst**
+*   **The Problem:** Significant revenue leakage due to manual typing errors (e.g., negative bills).
+*   **The Solution:** Automated Billing & Financial Discrepancy Audits.
+*   **Key Concept:** Loops & Comparisons (The "Audit Scanner" Logic).
+*   **Analyzed Script:** [year_2_billing_audit.py](https://github.com/nisar46/Healthcare-Data-Analysis-Journey/blob/main/Year_Two/year_2_billing_audit.py)
 
-### [Year 03: Patient Leakage (Retention)](./Year_Three)
-*   **Role:** Patient Experience Manager
-*   **The Problem:** Pregnant patients dropping out before delivery (Revenue Loss).
-*   **The Solution:** Predicted Due Dates (EDD) to find drop-offs.
-*   **Key Concept:** `Date-Time` & `Lists` (The "Calendar" Logic).
-*   **Analyzed Script:** [`year_3_retention_logic.py`](./Year_Three/year_3_retention_logic.py)
+**Year 03: Patient Leakage (Retention)**
+*   **Role:** **Data Analyst**
+*   **The Problem:** Pregnant patients dropping out before delivery (Significant Loss/Attrition).
+*   **The Solution:** Utilizing Predicted Due Dates (EDD) to identify and retain patients.
+*   **Key Concept:** Date-Time & Lists (The "Retention Calendar" Logic).
+*   **Analyzed Script:** [year_3_retention_logic.py](https://github.com/nisar46/Healthcare-Data-Analysis-Journey/blob/main/Year_Three/year_3_retention_logic.py)
 
-### [Year 04: Business Intelligence (Analytics)](./Year_Four)
-*   **Role:** Hospital Administrator
-*   **The Problem:** Management needed high-level summaries, not raw spreadsheets.
-*   **The Solution:** Automated **Departmental Reports**.
-*   **Key Concept:** `Dictionaries` (The "Sorting" Logic).
-*   **Analyzed Script:** [`year_4_analytics_report.py`](./Year_Four/year_4_analytics_report.py)
+**Year 04: Business Intelligence (Analytics)**
+*   **Role:** **Data Analyst**
+*   **The Problem:** Management needed high-level operational summaries, not raw clinical spreadsheets.
+*   **The Solution:** Automated Departmental Performance & Analytics Reports.
+*   **Key Concept:** Dictionaries (The "BI Dashboard" Logic).
+*   **Analyzed Script:** [year_4_analytics_report.py](https://github.com/nisar46/Healthcare-Data-Analysis-Journey/blob/main/Year_Four/year_4_analytics_report.py)
 
-### [Year 05: The Architect (Compliance)](./Year_Five)
-*   **Role:** Health-Tech Architect
-*   **The Problem:** Preparing for **ABDM** and **DPDP Act 2023** regulations.
-*   **The Solution:** Automated **Governance Audits**.
-*   **Key Concept:** `Thresholds` & `Multi-Conditions` (The "Inspector" Logic).
-*   **Analyzed Script:** [`year_5_compliance_check.py`](./Year_Five/year_5_compliance_check.py)
+**Year 05: Regulatory Data Governance (Compliance)**
+*   **Role:** **Data Analyst (Compliance Lead)**
+*   **The Problem:** Preparing legacy systems for ABDM 2.0 and India's DPDP Act 2023 regulations.
+*   **The Solution:** Automated Data Governance & Privacy Audits.
+*   **Key Concept:** Thresholds & Multi-Conditions (The "Compliance Inspector" Logic).
+*   **Analyzed Script:** [year_5_compliance_check.py](https://github.com/nisar46/Healthcare-Data-Analysis-Journey/blob/main/Year_Five/year_5_compliance_check.py)
+
 
 ### [Year 06: The Pivot (Core Engineering & Clinical ML)](./Year_Six_2026_Pivot)
 *   **Role:** Senior Solution Architect (Transitioning)
